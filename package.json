@@ -1,6 +1,6 @@
 {
   "name": "@saiphsoft/validate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple input validation library",
   "main": "index.js",
   "author": "Dylan Bartley (d.bartley44@gmail.com)",
