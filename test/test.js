@@ -1,7 +1,7 @@
 const { validText, validName, minLength } = require('../validators');
 const validate = require('..');
 
-let res = validate('asdfasdf!', [
+let res = validate('dsadfa%$&', [
   validText()
 ], { locale: 'jp' });
 

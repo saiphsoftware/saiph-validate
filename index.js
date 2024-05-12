@@ -19,9 +19,10 @@ function validate ( value, validators, options ) {
       errors[err] = lang[err];
   });
 
+  const count = Object.keys(errors).length;
   return {
-    valid: !errors.length,
-    count: Object.keys(errors).length,
+    valid: !count,
+    count,
     errors
   };
 }
