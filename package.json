@@ -1,0 +1,12 @@
+{
+  "name": "@saiphsoft/validate",
+  "version": "1.0.0",
+  "description": "simple input validation library",
+  "main": "index.js",
+  "author": "Dylan Bartley (d.bartley44@gmail.com)",
+  "license": "ISC",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/saiphsoftware/saiph-validate"
+  }
+}
