@@ -1,9 +1,8 @@
-const { validEmail, required, minLength } = require('../validators');
+const { validText, validName, minLength } = require('../validators');
 const validate = require('..');
 
-let res = validate(null, [
-  required(),
-  minLength()
+let res = validate('asdfasdf!', [
+  validText()
 ], { locale: 'jp' });
 
 console.log(res);
