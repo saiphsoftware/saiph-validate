@@ -1,15 +1,22 @@
-const languages = {
-  en: require('./lang/en')
-};
+const locale = require('./locale');
 
-function validate ( value, validators ) {
+function validate ( value, validators, options ) {
+  // resulting errors
   let errors = {};
-  let lang = process.env.SAIPH_LANG || 'en';
 
+  // options
+  let _ops = { locale: 'en' };
+  if (options)
+    Object.assign(_ops, options);
+  
+  // get language
+  const lang = locale[_ops.locale] || locale['en'];
+
+  // run validators
   validators.forEach(validator => {
     let err = validator.call(this, value);
     if (err)
-      errors[err] = languages[lang][err];
+      errors[err] = lang[err];
   });
 
   return {
